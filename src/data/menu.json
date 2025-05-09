@@ -1,0 +1,34 @@
+[
+  {
+    "en": "Dashboard",
+    "fr": "Tableau de bord"
+  },
+  {
+    "en": "Products",
+    "fr": "Produits"
+  },
+  {
+    "en": "Stock",
+    "fr": "Stock"
+  },
+  {
+    "en": "Manage users",
+    "fr": "Gérer les utilisateurs"
+  },
+  {
+    "en": "Manage profiles",
+    "fr": "Gérer les profils"
+  },
+  {
+    "en": "View profiles",
+    "fr": "Voir les profils"
+  },
+  {
+    "en": "Settings",
+    "fr": "Paramètres"
+  },
+  {
+    "en": "Logout",
+    "fr": "Se déconnecter"
+  }
+]

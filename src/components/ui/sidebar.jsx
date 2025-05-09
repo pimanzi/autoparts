@@ -65,14 +65,14 @@ export function Sidebar({ expanded, onToggle }) {
       animate={{ width: expanded ? 240 : 70 }}
       transition={{ duration: 0.15 }}
       className={cn(
-        'h-screen bg-background border-r flex flex-col fixed top-0 left-0 z-50 py-4',
+        'h-screen bg-background border-r flex flex-col fixed top-0 left-0 z-50 py-2',
         expanded ? 'px-4' : 'px-2',
-        'lg:z-20',
+        'lg:z-20 lg:py-4',
         !expanded && 'w-[70px]'
       )}
     >
       {/* Logo */}
-      <div className="flex items-center justify-between mb-8 h-12">
+      <div className="flex items-center justify-between mb-2 lg:mb-8 h-12">
         {expanded && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -83,7 +83,7 @@ export function Sidebar({ expanded, onToggle }) {
             <img
               src="/images/logo.png"
               alt="KAP Logo"
-              className="h-[120px] md:h-auto w-auto mt-5"
+              className="h-[80px] md:h-[120px] w-auto mt-2 lg:mt-5"
             />
           </motion.div>
         )}
@@ -98,7 +98,7 @@ export function Sidebar({ expanded, onToggle }) {
       </div>
 
       {/* Navigation Items */}
-      <nav className="flex-1 space-y-2">
+      <nav className="flex-1 space-y-1 lg:space-y-2 overflow-y-auto">
         <TooltipProvider delayDuration={0}>
           {menuItems.map(({ icon: Icon, name, shortName, path }) => {
             const isActive = location.pathname === path;
@@ -110,7 +110,7 @@ export function Sidebar({ expanded, onToggle }) {
                   <Link to={path}>
                     <motion.div
                       className={cn(
-                        'flex items-center gap-4 px-3 py-2.5 rounded-lg mt-4 font-medium cursor-pointer transition-all duration-150',
+                        'flex items-center gap-4 px-3 py-1.5 lg:py-2.5 rounded-lg mt-1 lg:mt-4 font-medium cursor-pointer transition-all duration-150',
                         isActive
                           ? 'bg-primary text-primary-foreground font-medium'
                           : 'hover:bg-accent hover:text-accent-foreground'
@@ -138,13 +138,13 @@ export function Sidebar({ expanded, onToggle }) {
       </nav>
 
       {/* View Profile & Logout */}
-      <div className="space-y-2 mt-4">
+      <div className="mt-1 lg:mt-4 space-y-1 lg:space-y-2">
         <TooltipProvider delayDuration={0}>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link to="/profile">
                 <motion.div
-                  className="flex items-center gap-4 px-3 py-2.5 rounded-lg cursor-pointer transition-all duration-150 hover:bg-accent hover:text-accent-foreground"
+                  className="flex items-center gap-4 px-3 py-1.5 lg:py-2.5 rounded-lg cursor-pointer transition-all duration-150 hover:bg-accent hover:text-accent-foreground"
                   whileHover={{ scale: 1.01, x: expanded ? 4 : 0 }}
                   whileTap={{ scale: 0.99 }}
                   transition={{ duration: 0.1 }}
