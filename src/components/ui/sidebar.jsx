@@ -65,7 +65,7 @@ export function Sidebar({ expanded, onToggle }) {
       animate={{ width: expanded ? 240 : 70 }}
       transition={{ duration: 0.15 }}
       className={cn(
-        'h-screen bg-background border-r flex flex-col fixed top-0 left-0 z-50 py-2',
+        'h-screen bg-background border-r flex flex-col fixed top-0 left-0 z-50 py-6',
         expanded ? 'px-4' : 'px-2',
         'lg:z-20 lg:py-4',
         !expanded && 'w-[70px]'
