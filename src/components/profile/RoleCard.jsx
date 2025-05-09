@@ -40,14 +40,14 @@ const PermissionCheckbox = ({
             />
             <label
               htmlFor={id}
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className="text-base font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               {label}
             </label>
           </div>
         </TooltipTrigger>
         <TooltipContent>
-          <p>{permissionDescriptions[id] || label}</p>
+          <p className="text-sm">{permissionDescriptions[id] || label}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
