@@ -231,9 +231,7 @@ export default function UsersPage() {
               <TableHead className="text-base font-semibold">
                 Last Name
               </TableHead>
-              <TableHead className="table-cell text-base font-semibold">
-                Email
-              </TableHead>
+              <TableHead className=" text-base font-semibold">Email</TableHead>
               <TableHead className="text-base font-semibold">Role</TableHead>
               <TableHead className="w-[100px] text-base font-semibold">
                 Actions
@@ -247,9 +245,7 @@ export default function UsersPage() {
                   {user.firstName}
                 </TableCell>
                 <TableCell className="text-base">{user.lastName}</TableCell>
-                <TableCell className="hidden md:table-cell text-base">
-                  {user.email}
-                </TableCell>
+                <TableCell className="text-base">{user.email}</TableCell>
                 <TableCell>
                   <Badge
                     variant={getRoleBadgeVariant(user.role)}
